@@ -1,0 +1,29 @@
+.host {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+.host h3 {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+@media screen and (max-width: 380px) {
+  .host h3 {
+    font-size: 0.75rem;
+  }
+}
+.host img {
+  margin-left: 0.5rem;
+  width: 4rem;
+  border-radius: 50%;
+}
+@media screen and (max-width: 380px) {
+  .host img {
+    width: 2rem;
+  }
+}/*# sourceMappingURL=Host.css.map */

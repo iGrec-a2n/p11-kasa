@@ -1,0 +1,22 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  padding: 3.125rem;
+  border-radius: 1rem;
+  background-color: hsl(0, 0%, 96%);
+}
+@media screen and (max-width: 1012px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 590px) {
+  .gallery {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+    background-color: hsl(0, 0%, 100%);
+    gap: 1rem;
+  }
+}/*# sourceMappingURL=Gallery.css.map */

@@ -1,0 +1,20 @@
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+}
+@media screen and (max-width: 590px) {
+  .tags {
+    font-size: 0.625rem;
+    margin-top: 1rem;
+  }
+}
+.tags .tag {
+  background-color: hsl(0, 100%, 69%);
+  padding: 0.3rem 1rem;
+  border-radius: 0.6rem;
+}/*# sourceMappingURL=Tags.css.map */

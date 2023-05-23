@@ -1,0 +1,26 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 13.0625rem;
+  color: white;
+  background-color: black;
+  font-size: 1.5rem;
+  margin-top: auto;
+}
+@media screen and (max-width: 590px) {
+  .footer {
+    font-size: 0.75rem;
+  }
+}
+.footer .logo {
+  width: 7.625rem;
+  margin: 1rem;
+}
+@media screen and (max-width: 380px) {
+  .footer .logo {
+    width: 5.125rem;
+  }
+}/*# sourceMappingURL=Footer.css.map */

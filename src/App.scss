@@ -1,0 +1,43 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+// style de base de l'app Kasa
+body {
+  margin: 0;
+  // max-width: rem(1440);
+  background-color: $bgColor;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  margin: $elementMargin $bodyMargin;
+
+  @include tablet {
+    margin : $elementMargin;
+  }
+
+  @include mobile-large {
+    margin : 0 1rem 1rem;
+  }
+}
+
+a {
+  color: $mainColor;
+  // border-bottom: solid 0 $mainColor;
+  transition: border-bottom 0.25s ease-out .1s;
+  
+  &.--actif {
+    // text-decoration: underline;
+    border-bottom: solid 2px $mainColor;
+
+    @include mobile-large {
+      border-bottom: solid 1px $mainColor;
+    }
+  }
+}

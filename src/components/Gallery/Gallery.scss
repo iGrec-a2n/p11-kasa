@@ -1,0 +1,24 @@
+@import '../../mixins.scss';
+
+// style composant Gallery
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $elementMargin;
+    padding: rem(50);
+    border-radius: 1rem;
+    background-color: $neutralColor;
+
+    @include small-desk {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile-large {
+        display: flex;
+        flex-flow: row wrap;
+        padding: 0;
+        background-color: $bgColor;
+        gap: 1rem;
+    }
+
+}

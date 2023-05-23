@@ -1,0 +1,24 @@
+@import '../../mixins.scss';
+
+// style des titres de la page logements
+.housing-title {
+    color: $mainColor;
+    font-weight: 500;
+
+    h2 {
+        font-size: rem(36);
+
+        @include mobile-large {
+            font-size: rem(18);
+        }
+    }
+
+    h3 {
+        font-size: rem(18);
+
+        @include mobile-large {
+            font-size: rem(14);
+        }
+
+    }
+}

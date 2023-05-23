@@ -1,0 +1,59 @@
+@import '../../mixins.scss';
+
+//  Style du composant Header
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: $elementMargin $bodyMargin 0 $bodyMargin;
+
+    @include tablet {
+        margin: $elementMargin $elementMargin  0 $elementMargin;
+        align-items: center;
+    }
+
+    @include mobile-large {
+        margin : 1rem 1rem 0 1rem;
+    }
+
+    .logo {
+        width: 16vw;
+
+        @include tablet {
+            width: rem(145);
+        }
+        
+        @include mobile {
+            width: rem(100);
+        }
+    }
+
+    .navigation {
+        display: flex;
+        font-weight: 500;
+        font-size: rem(24);
+        gap: rem(65);
+
+        @include tablet {
+            gap: rem(21);
+        }
+
+        @include mobile-large {
+            text-transform: uppercase;
+            font-size: rem(12);
+        }
+
+        @include mobile {
+            font-size: rem(9);
+        }
+
+        @include mobile-small {
+            gap: rem(5);
+            flex-direction: column;
+        }
+    
+        li{
+            padding: 0 .5rem;
+        }
+    }
+}

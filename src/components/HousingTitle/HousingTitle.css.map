@@ -1,0 +1,1 @@
+{"version":3,"sources":["HousingTitle.scss","../../variables.scss","HousingTitle.css","../../mixins.scss"],"names":[],"mappings":"AAGA;EACI,wBCSQ;EDRR,gBAAA;AEFJ;AFII;EACI,kBAAA;AEFR;ACUI;EHTA;IAIQ,mBAAA;EEDV;AACF;AFII;EACI,mBAAA;AEFR;ACEI;EHDA;IAIQ,mBAAA;EEDV;AACF","file":"HousingTitle.css"}

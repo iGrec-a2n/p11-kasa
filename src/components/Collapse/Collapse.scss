@@ -1,0 +1,77 @@
+@import '../../mixins.scss';
+
+// style du composant Collapse
+$borderRadius: .5rem;
+
+.collapse {
+    max-width: rem(1023);
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    
+    .collapse-bar{
+        cursor: pointer;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .5rem 1.5rem .5rem .8rem;
+        font-size: rem(18);
+        font-weight: 500;
+        color: white;
+        background-color: hsl(0, 100%, 69%);
+        border-radius: $borderRadius;
+
+        &:active {
+            .close-icon {
+                width: 1rem;
+            }
+        }
+
+        @include mobile-large {
+            padding: .5rem 1rem .5rem .8rem;
+            font-size: rem(13);
+        }
+
+        .close-icon {
+            width: 1.1rem;
+            transition: transform .25s ease .05s;
+        }
+
+        &[aria-expanded="true"] {
+            .close-icon {
+            transform: rotate(180deg);
+            transition: transform .25s ease .05s;
+            }
+        }
+
+    }
+
+    .collapse-content{
+        display: flex;
+        height: 100%;
+        // overflow: hidden;
+        position: fixed;
+        padding : 2rem 1rem 1rem;
+        color: hsl(0, 100%, 69%);
+        background-color: hsl(0, 0%, 96%);
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform .25s ease .1s;
+        // opacity: 0;
+        
+        @include mobile-large {
+            font-size: rem(12);
+        }
+
+        &[aria-hidden="false"] {
+            z-index: -2;
+            flex: 1 1;
+            margin-top: -1rem;
+            margin-bottom: 1rem;
+            transform: scaleY(1);
+            position: relative;
+        }
+    }
+
+}

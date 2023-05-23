@@ -1,0 +1,22 @@
+@import '../../mixins.scss';
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .5rem;
+        margin-top: 1.5rem;
+        font-size: rem(14);
+        font-weight: 500;
+        color: white;
+
+        @include mobile-large {
+            font-size: rem(10);
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background-color: $mainColor;
+            padding: .3rem 1rem;
+            border-radius: .6rem;
+        }
+    }

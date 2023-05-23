@@ -1,0 +1,60 @@
+.collapse {
+  max-width: 63.9375rem;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.collapse .collapse-bar {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1.5rem 0.5rem 0.8rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: white;
+  background-color: hsl(0, 100%, 69%);
+  border-radius: 0.5rem;
+}
+.collapse .collapse-bar:active .close-icon {
+  width: 1rem;
+}
+@media screen and (max-width: 590px) {
+  .collapse .collapse-bar {
+    padding: 0.5rem 1rem 0.5rem 0.8rem;
+    font-size: 0.8125rem;
+  }
+}
+.collapse .collapse-bar .close-icon {
+  width: 1.1rem;
+  transition: transform 0.25s ease 0.05s;
+}
+.collapse .collapse-bar[aria-expanded=true] .close-icon {
+  transform: rotate(180deg);
+  transition: transform 0.25s ease 0.05s;
+}
+.collapse .collapse-content {
+  display: flex;
+  height: 100%;
+  position: fixed;
+  padding: 2rem 1rem 1rem;
+  color: hsl(0, 100%, 69%);
+  background-color: hsl(0, 0%, 96%);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.25s ease 0.1s;
+}
+@media screen and (max-width: 590px) {
+  .collapse .collapse-content {
+    font-size: 0.75rem;
+  }
+}
+.collapse .collapse-content[aria-hidden=false] {
+  z-index: -2;
+  flex: 1 1;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+  transform: scaleY(1);
+  position: relative;
+}/*# sourceMappingURL=Collapse.css.map */

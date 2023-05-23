@@ -1,0 +1,18 @@
+.rate {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: 1rem;
+}
+@media screen and (max-width: 590px) {
+  .rate {
+    margin-top: 0.5rem;
+  }
+}
+.rate svg {
+  width: 2.25rem;
+}
+@media screen and (max-width: 380px) {
+  .rate svg {
+    width: 1.125rem;
+  }
+}/*# sourceMappingURL=Rate.css.map */

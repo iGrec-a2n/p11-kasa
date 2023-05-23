@@ -1,0 +1,13 @@
+// style composant About
+.about {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1rem;
+
+    .banner {
+        img {
+            filter: brightness(70%);
+        }
+    }
+}

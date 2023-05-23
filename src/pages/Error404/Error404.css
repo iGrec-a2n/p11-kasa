@@ -1,0 +1,51 @@
+.error404 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: column wrap;
+  color: hsl(0, 100%, 69%);
+  min-height: 50vh;
+}
+.error404 .warning {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+.error404 a {
+  text-decoration: underline;
+  font-size: 1.125rem;
+}
+@media screen and (max-width: 820px) {
+  .error404 a {
+    font-size: 0.875rem;
+  }
+}
+.error404 h2 {
+  font-size: 18rem;
+  font-weight: bold;
+}
+@media screen and (max-width: 820px) {
+  .error404 h2 {
+    font-size: 6rem;
+  }
+}
+@media screen and (max-width: 380px) {
+  .error404 h2 {
+    font-size: 3.375rem;
+  }
+}
+.error404 h3 {
+  font-size: 2.25rem;
+  text-align: center;
+}
+@media screen and (max-width: 820px) {
+  .error404 h3 {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (max-width: 380px) {
+  .error404 h3 {
+    font-size: 0.625rem;
+  }
+}/*# sourceMappingURL=Error404.css.map */

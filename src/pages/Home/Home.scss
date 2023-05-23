@@ -1,0 +1,21 @@
+@import '../../mixins.scss';
+
+// style de la page d'accueil
+.banner {
+    margin-bottom: $elementMargin;
+
+    @include mobile-large {
+        margin-bottom: 1rem;
+    }
+    
+    &:after {
+        content: '';
+        z-index: -1;
+        position:absolute;
+        top:0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(90deg, rgba(0,0,0,0.3) 55%, rgba(255,255,255,0) 100%); 
+    }
+}

@@ -1,0 +1,27 @@
+@import '../../mixins.scss';
+
+// style du footer
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: rem(209);
+    color: white;
+    background-color: black;
+    font-size: rem(24);
+    margin-top: auto;
+
+    @include mobile-large {
+        font-size: rem(12);
+    }
+
+    .logo {
+        width: rem(122);
+        margin: 1rem;
+        @include mobile {
+            width: rem(82);
+        }
+    }
+}
