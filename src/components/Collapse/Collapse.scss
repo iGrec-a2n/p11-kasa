@@ -48,29 +48,28 @@ $borderRadius: .5rem;
     }
 
     .collapse-content{
-        display: flex;
+        display: table-column;
         height: 100%;
-        // overflow: hidden;
-        position: fixed;
+        overflow: hidden;
+        position: relative;
         padding : 2rem 1rem 1rem;
         color: hsl(0, 100%, 69%);
         background-color: hsl(0, 0%, 96%);
         transform: scaleY(0);
         transform-origin: top;
         transition: transform .25s ease .1s;
-        // opacity: 0;
         
         @include mobile-large {
             font-size: rem(12);
         }
-
+        
         &[aria-hidden="false"] {
+            display: flex;
             z-index: -2;
             flex: 1 1;
             margin-top: -1rem;
             margin-bottom: 1rem;
             transform: scaleY(1);
-            position: relative;
         }
     }
 
