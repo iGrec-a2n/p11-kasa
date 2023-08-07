@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 import './Home.scss'
-import bannerImg from '../../assets/banniere-accueil.png'
+import bannerImg from '../../assets/images/banniere-accueil.png'
 
 import Loader from '../../components/Loader/Loader'
 import Banner from '../../components/Banner/Banner'
@@ -34,7 +34,7 @@ export default function Home() {
       return error ? <p>Erreur : {error.message}</p>
       : !isLoaded ? <Loader />
       : <div className='home'>
-            <Banner img={bannerImg} alt="bannière" texte ="Chez vous, partout et ailleurs"/>
+            <Banner img={bannerImg} alt="bannière" text ="Chez vous, partout et ailleurs"/>
             <Gallery housings={housings}/>
         </div>
     

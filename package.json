@@ -1,6 +1,6 @@
 {
   "name": "p11-kasa",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -9,12 +9,13 @@
     "eslint": "^8.39.0",
     "node-sass": "^8.0.0",
     "prettier": "^2.8.8",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "^6.11.1",
     "react-router-dom": "^6.11.1",
     "react-scripts": "5.0.1",
-    "sass": "^1.62.1",
+    "sass": "^1.64.2",
     "sass-migrator": "^1.7.3",
     "web-vitals": "^2.1.4"
   },
@@ -41,5 +42,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.jsx",
+  "repository": "https://github.com/iGrec-a2n/p11-kasa.git",
+  "author": "Yann <yannnda97@gmail.com>",
+  "license": "MIT"
 }

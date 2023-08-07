@@ -1,4 +1,4 @@
-@import '../../mixins.scss';
+@import '../../utils/style/mixins.scss';
 
 // style du composant carousel
 .carousel {
@@ -55,7 +55,10 @@
         align-items: center;
         width: 100%;
         height: 100%;
-    }
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(255,0,0,0) 40%),
+                    linear-gradient(90deg, rgba(95, 95, 95, 0.5), rgba(0,255,0,0) 10%),
+                    linear-gradient(270deg, rgba(95, 95, 95, 0.5), rgba(0,0,255,0) 10%);
+}
 
     .currentImgCount {
         z-index: 10;

@@ -1,5 +1,5 @@
 import './Header.scss'
-import { ReactComponent as Logo } from '../../assets/logo.svg'
+import { ReactComponent as Logo } from '../../assets/images/logo.svg'
 import Navbar from '../Navbar/Navbar'
 
 import { Link } from 'react-router-dom'

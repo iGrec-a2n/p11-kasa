@@ -1,12 +1,13 @@
 import './Collapse.scss'
 import { useState } from 'react'
+import PropTypes from 'prop-types'
 
 import { ReactComponent as CloseIcon } from '../../assets/icons/chevron-down.svg'
 
 
-export default function Collapse(props) {
+export default function Collapse({title, list, text }) {
   
-  const [toggle, setToggle] = useState(true)
+  const [toggle, setToggle] = useState(false)
   const toggleState = () => {
     setToggle(!toggle)
   }
@@ -23,7 +24,7 @@ export default function Collapse(props) {
         aria-controls="collapse-content"
         aria-expanded={toggle ? 'true' : 'false'}
         >
-          {props.titre}
+          {title}
           <CloseIcon
             alt="Déplier / Replier"
             className={toggle ? 'close-icon open' : 'close-icon'}
@@ -38,16 +39,22 @@ export default function Collapse(props) {
         >
 
         {/* si contenu = liste */}
-        {props.liste &&
+        {list &&
           <ul>
-            {props.liste.map(item => <li key={item.toString()}>{item}</li>)}
+            {list.map(item => <li key={item.toString()}>{item}</li>)}
           </ul>}
         {/* si contenu = paragraphe */}
-        {props.texte && 
-          <p>{props.texte}</p>}
+        {text && 
+          <p>{text}</p>}
 
         </div>
       </div>
   )
 
+}
+
+Collapse.propTypes = {
+  title: PropTypes.string.isRequired,
+  list: PropTypes.node,
+  text: PropTypes.string
 }

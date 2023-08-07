@@ -10,6 +10,14 @@
   border-radius: 1rem;
   overflow: hidden;
 }
+.carousel::before {
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+}
 @media screen and (max-width: 590px) {
   .carousel {
     height: 15.9375rem;

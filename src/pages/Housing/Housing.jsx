@@ -41,8 +41,8 @@ export default function Housing() {
         <Carousel images={currentHousing.pictures} description={currentHousing.title}/>
         <HousingInfos {...currentHousing}/>
         <div className="collapses">
-            <Collapse titre="Description" texte={currentHousing.description}/>
-            <Collapse titre="Équipements" liste={currentHousing.equipments}/>
+            <Collapse title="Description" text={currentHousing.description}/>
+            <Collapse title="Équipements" list={currentHousing.equipments}/>
         </div>
     </div>;
 }

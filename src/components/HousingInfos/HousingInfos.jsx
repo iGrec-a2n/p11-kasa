@@ -6,16 +6,16 @@ import Host from "../Host/Host"
 import Rate from "../Rate/Rate"
 
 
-export default function HousingInfos(props) {
+export default function HousingInfos({title, location, tags, rating, host}) {
   return (
     <div className='housing-infos'>
             <div className='infos-section'>
-                <HousingTitle titre={props.title} localisation={props.location}/>
-                <Tags listeTags={props.tags}/>
+                <HousingTitle title={title} location={location}/>
+                <Tags listeTags={tags}/>
             </div>
             <div className='infos-section'>
-                <Host name={props.host.name} picture={props.host.picture} />
-                <Rate rating={props.rating}/>
+                <Host name={host.name} picture={host.picture} />
+                <Rate rating={parseInt(rating)}/>
             </div> 
         </div>
   )

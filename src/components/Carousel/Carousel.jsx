@@ -1,10 +1,11 @@
 import { useState } from 'react'
+import PropTypes from 'prop-types'
 
 import './Carousel.scss'
 import BtnCarousel from './BtnCarousel'
 
 
-export default function Carousel(props) {
+export default function Carousel({images, description}) {
 
   const [currentImg, setCurrentImg] = useState({
     index: 1
@@ -12,11 +13,11 @@ export default function Carousel(props) {
 
   const nextImg = () => {
       // navigation dans les images suivante
-    if (currentImg.index !== props.images.length) {
+    if (currentImg.index !== images.length) {
       setCurrentImg({index: currentImg.index +1})
 
       // si dernière image, retour au début
-    } else if (currentImg.index === props.images.length){
+    } else if (currentImg.index === images.length){
       setCurrentImg({index: 1})
     }
   }
@@ -27,26 +28,26 @@ export default function Carousel(props) {
       setCurrentImg({index: currentImg.index -1})
     // si première image, passer à la dernière
     } else if (currentImg.index === 1){
-      setCurrentImg({index: props.images.length})
+      setCurrentImg({index: images.length})
     }
   }
 
-  if (props.images.length > 1) {
+  if (images.length > 1) {
   // si plusieurs images dans le carrousel
     return (
       <div className="carousel" aria-label="carousel">
   
         {/* affichage des images */}
         <div className="medias">
-          {props.images.map((item, index)=> {
+          {images.map((item, index)=> {
             return (
               <img
                 key={item}
                 aria-hidden={currentImg.index === index +1 ? "false" : "true"}
                 className="medias-item"
                 src={item}
-                alt={props.description}
-                aria-label={`${currentImg.index} / ${props.images.length}`}
+                alt={description}
+                aria-label={`${currentImg.index} / ${images.length}`}
               />
             )
           })}
@@ -57,7 +58,7 @@ export default function Carousel(props) {
           <BtnCarousel changeImg={nextImg} direction={"next"}/>
         </div>
   
-        <span className="currentImgCount" tabIndex="0">{`${currentImg.index} / ${props.images.length}`}</span>k
+        <span className="currentImgCount" tabIndex="0">{`${currentImg.index} / ${images.length}`}</span>k
   
       </div>
     )
@@ -68,11 +69,17 @@ export default function Carousel(props) {
         <div className="medias">
               <img
                 className="medias-item"
-                src={props.images}
-                alt={props.description}
+                src={images}
+                alt={description}
               />
         </div>
       </div>
     )
   }
+}
+
+
+Carousel.propTypes = {
+  images: PropTypes.array.isRequired,
+  description: PropTypes.string
 }

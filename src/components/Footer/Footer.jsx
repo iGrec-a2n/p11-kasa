@@ -1,5 +1,5 @@
 import './Footer.scss'
-import { ReactComponent as Logo } from '../../assets/logo-white.svg'
+import { ReactComponent as Logo } from '../../assets/images/logo-white.svg'
 
 import { Link } from 'react-router-dom'
 
