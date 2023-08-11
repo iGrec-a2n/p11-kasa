@@ -1,12 +1,13 @@
 // variables communes au projet Kasa
+@use "sass:math";
 
 // gestion des rem
 $html-font-size: 16px;
 @function stripUnit($value) {
-    @return $value / ($value * 0 + 1);
+    @return math.div($value, ($value* 0 + 1));
 }
 @function rem($pxValue) {
-    @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
+    @return math.div(stripUnit($pxValue) , stripUnit($html-font-size))* 1rem;
 }
 
 // palette de couleurs
