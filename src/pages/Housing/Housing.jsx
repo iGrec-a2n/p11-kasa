@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
 import './Housing.scss'
@@ -15,6 +15,7 @@ export default function Housing() {
     const [error, setError] = useState(null)
     const [isLoaded, setIsLoaded] = useState(false)
     const [currentHousing, setCurrentHousing] = useState([])
+    const navigate = useNavigate()
 
     useEffect(() => {
         const fetchData = () => {
@@ -23,6 +24,7 @@ export default function Housing() {
             .then(
                 (result) => {
                     const findCurrentHousing = result.find(housing => housing.id === currentHousingId)
+                    if (!findCurrentHousing) navigate('*')
                     setCurrentHousing(findCurrentHousing)
                     setIsLoaded(true)
                 },
@@ -33,7 +35,7 @@ export default function Housing() {
             )
         }
         fetchData()    
-    }, [currentHousingId, setCurrentHousing])
+    }, [currentHousingId, setCurrentHousing, navigate])
 
     return error ? <p>Erreur : {error.message}</p>
     : !isLoaded ? <Loader />
